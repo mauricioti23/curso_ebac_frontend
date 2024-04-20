@@ -1,0 +1,81 @@
+/* Reset de estilos para garantir consistência entre navegadores */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos básicos para o corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para o logotipo */
+#logo-check {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Estilo para o título */
+h1 {
+    font-size: 24px;
+}
+
+/* Estilo para o formulário de cadastro de tarefas */
+#lista-tarefa {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para o input de nome da tarefa */
+#nome-tarefa {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilo para o botão de cadastrar */
+#lista-tarefa button {
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Estilo para a tabela de tarefas */
+#tabela-tarefas {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+/* Estilo para as células da tabela */
+#tabela-tarefas td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Estilo para a classe de tarefa riscada */
+.riscado {
+    text-decoration: line-through;
+}
