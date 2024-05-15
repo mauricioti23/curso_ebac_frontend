@@ -1,0 +1,231 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Corrigir problema de box model */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Corpo da página */
+html {
+    overflow-x: hidden; /* Evitar barra de rolagem horizontal */
+}
+
+/* Estilização do container principal */
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Estilização do cabeçalho */
+header {
+    background-color: #ffc107; /* Amarelo */
+    padding: 16px 0;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center; /* Centralizar o conteúdo */
+}
+
+header > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permitir que os elementos quebrem para a próxima linha */
+}
+
+/* Estilização da barra de navegação */
+nav {
+    background-color: #ffcccc; /* Vermelho claro */
+    padding: 16px 0;
+    flex: 1; /* Ocupar todo o espaço disponível */
+    text-align: center; /* Centralizar o conteúdo */
+}
+
+nav ul {
+    list-style-type: none; /* Remover marcadores (pontos) da lista */
+    padding: 0;
+    display: inline-flex; /* Exibir os itens da lista em linha */
+}
+
+nav li {
+    display: inline;
+    margin-right: 16px;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Centralizar o título do cabeçalho com a lista de navegação */
+header h1 {
+    margin: 0; /* Remover margem padrão */
+}
+
+/* Estilos para seções */
+section {
+    padding: 48px 0;
+    position: relative; /* Posição relativa para permitir a linha divisória */
+}
+
+section h2 {
+    margin-bottom: 16px;
+    text-align: center; /* Centralizar o título */
+    font-size: 28px; /* Aumentar o tamanho da fonte do título */
+}
+
+/* Linha divisória amarela */
+.section-divider {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #ffc107; /* Amarelo */
+}
+
+/* Estilização da lista de produtos */
+.container-produtos ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não couberem */
+}
+
+.container-produtos li {
+    flex: 0 0 calc(25% - 20px); /* Largura do item da lista de produtos */
+    max-width: calc(25% - 20px);
+    margin-bottom: 32px;
+    padding: 16px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura do item */
+}
+
+.container-produtos img {
+    width: 100%; /* Largura total da imagem */
+    height: 200px; /* Altura fixa da imagem (ajustar conforme necessário) */
+    object-fit: cover; /* Ajusta a imagem para cobrir a área definida */
+    margin-bottom: 16px;
+}
+
+.container-produtos h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.container-produtos p {
+    font-size: 16px;
+}
+
+/* Estilização para os botões na seção "Produtos" */
+.container-produtos button {
+    display: block;
+    width: 100%; /* Largura total do botão */
+    padding: 12px;
+    border: none;
+    background-color: #9b59b6; /* Roxo claro */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.container-produtos button:hover {
+    background-color: #8e44ad; /* Alterar tom de roxo ao passar o mouse */
+}
+
+/* Estilização do rodapé */
+footer {
+    background-color: #ffc107; /* Amarelo */
+    color: #fff;
+    padding: 16px;
+    text-align: center; /* Centralizar o conteúdo */
+}
+
+footer p {
+    margin-bottom: 16px;
+}
+
+footer li {
+    display: inline;
+    margin-left: 16px;
+}
+
+footer img {
+    height: 24px;
+    margin-bottom: -6px;
+}
+
+/* Estilização da seção "Sobre a loja" */
+#sobre-a-loja .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Alinhar itens verticalmente */
+    text-align: center; /* Centralizar o conteúdo */
+}
+
+#sobre-a-loja img {
+    width: 60%; /* Aumentar a largura da imagem */
+    max-width: 600px; /* Largura máxima da imagem */
+    height: auto; /* Altura automática para manter a proporção */
+    margin-bottom: 20px; /* Espaçamento abaixo da imagem */
+}
+
+#sobre-a-loja h2 {
+    margin-bottom: 16px; /* Espaçamento abaixo do título */
+}
+
+#sobre-a-loja p {
+    max-width: 80%; /* Largura máxima para o parágrafo */
+    font-size: 16px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    /* Estilos para desktop a partir de 1024px */
+    header > .container {
+        flex-direction: column; /* Empilhar os elementos verticalmente */
+        text-align: center; /* Centralizar o conteúdo */
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 641px) {
+    /* Estilos para tablet entre 641px e 1023px */
+    .container-produtos li {
+        flex: 0 0 calc(33.33% - 20px); /* Ajustar largura dos itens para três colunas */
+        max-width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 640px) {
+    /* Estilos para mobile até 640px */
+    .container-produtos li {
+        flex: 0 0 100%; /* Ajustar largura dos itens para ocupar toda a largura */
+        max-width: 100%; /* Largura máxima igual à largura do container */
+    }
+
+    #sobre-a-loja img {
+        width: 100%; /* Ajustar largura da imagem para ocupar 100% da largura do container */
+        max-width: none; /* Remover largura máxima da imagem */
+    }
+
+    section {
+        padding: 32px 0; /* Reduzir o espaçamento entre as seções */
+    }
+
+    /* Reduzir tamanho da fonte do h2 para mobile */
+    section h2 {
+        font-size: 24px;
+    }
+}
